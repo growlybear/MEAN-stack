@@ -6,7 +6,7 @@
 
 exports.index = function (req, res) {
     res.render('index', {
-        title: 'Express',
+        title: 'Todo app - on the Code Barbarian\'s MEAN-stack',
         todos : [{
             description : 'Buy eggs',
             due : new Date(new Date().getTime() + 24 * 60 * 60 * 1000),     // 1 day from now

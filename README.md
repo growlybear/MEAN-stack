@@ -12,4 +12,5 @@
 9.  node app.js
 10.   - create .bowerrc modifying component install directory
 11. bower install angular
+12.   - add andgular logic and data-binding
 ```

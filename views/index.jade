@@ -1,17 +1,22 @@
 extends layout
 
-block head
-  //- Yuck!!
-  link(rel='stylesheet', href='/javascripts/vendor/bootstrap-css/css/bootstrap.css')
-
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container(ng-controller="TodoListController", ng-init="setTodos( #{JSON.stringify(todos)} )")
+    h1 Todo List
+    h2 Upcoming
+    div.row(ng-repeat="todo in todos | filter:notDoneFilter")
+      div.span9
+        label.checkbox
+          input(type="checkbox", ng-model="todo.done")
+          | {{todo.description}}
+      div.span3.text-right
+        i {{todo.due | date:'MMM d, yyyy'}}
 
-  ul#tools-list.span6.text-center
-    li
-      a(href='http://www.angularjs.org')
-        | AngularJS
-    li
-      a(href='http://www.expressjs.com')
-        | ExpressJS
+    h2 Done
+    div.row(ng-repeat="todo in todos | filter:doneFilter")
+      div.span9
+        label.checkbox
+          input(type="checkbox", ng-model="todo.done")
+          del {{todo.description}}
+      div.span3.text-right
+        i {{todo.due | date:'MMM d, yyyy'}}

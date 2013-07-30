@@ -7,4 +7,5 @@
 7.  mongod
 8.  tail -f /usr/local/var/log/mongodb/mongo.log (new tab)
 9.  node app.js
-10.
+10. - create .bowerrc modifying component install directory
+11. bower install angular

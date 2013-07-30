@@ -9,6 +9,9 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
+var Mongoose = require('mongoose');
+var db = Mongoose.createConnection('localhost', 'mytestapp');
+
 var app = express();
 
 // all environments

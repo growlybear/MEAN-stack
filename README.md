@@ -1,4 +1,4 @@
-* The [Code Barbarian](http://thecodebarbarian.wordpress.com/2013/07/22/introduction-to-the-mean-stack-part-one-setting-up-your-tools/) swears by it
+# The [Code Barbarian](http://thecodebarbarian.wordpress.com/2013/07/22/introduction-to-the-mean-stack-part-one-setting-up-your-tools/) swears by it
 
 ```
 1.  brew install node

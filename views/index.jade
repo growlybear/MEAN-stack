@@ -1,5 +1,17 @@
 extends layout
 
+block head
+  //- Yuck!!
+  link(rel='stylesheet', href='/javascripts/vendor/bootstrap-css/css/bootstrap.css')
+
 block content
   h1= title
   p Welcome to #{title}
+
+  ul#tools-list.span6.text-center
+    li
+      a(href='http://www.angularjs.org')
+        | AngularJS
+    li
+      a(href='http://www.expressjs.com')
+        | ExpressJS

@@ -4,7 +4,7 @@ block content
   div.container(ng-controller="TodoListController", ng-init="setTodos( #{JSON.stringify(todos)} )")
     h1 Todo List
     h2 Upcoming
-    div.row.todo.not-done#mike(ng-repeat="todo in todos | filter:notDoneFilter")
+    div.row.todo.not-done(ng-repeat="todo in todos | filter:notDoneFilter")
       div.span9
         label.checkbox
           input(type="checkbox", ng-model="todo.done")

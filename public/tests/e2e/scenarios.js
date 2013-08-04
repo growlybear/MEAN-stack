@@ -14,13 +14,23 @@ describe('Todo list', function() {
         expect(repeater('.not-done').count()).toBe(2);
         expect(repeater('.done').count()).toBe(1);
 
-        element('.not-done:nth-child(1) input').click();
+        element('.not-done input').query(function (els, done) {
+            els[0].click();
+            done();
+        });
+
         sleep(0.3);
+
         expect(repeater('.not-done').count()).toBe(1);
         expect(repeater('.done').count()).toBe(2);
 
-        element('.done:nth-child(1) input').click();
+        element('.done input').query(function (els, done) {
+            els[0].click();
+            done();
+        });
+
         sleep(0.3);
+
         expect(repeater('.not-done').count()).toBe(2);
         expect(repeater('.done').count()).toBe(1);
     });
